@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Blog | Lombok DevLab - Tips & Info Jasa Pembuatan Website Lombok</title>
+    <meta name="description" content="Blog Lombok DevLab: artikel menarik seputar pembuatan website, tips SEO, digital marketing untuk UMKM, cafe, dan travel di Lombok & Indonesia.">
+    <meta name="keywords" content="blog lombok developer, tips website lombok, jasa pembuatan website blog, artikel website umkm, lombok web tips">
+    <meta name="author" content="Lombok DevLab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lombokdevlab.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog Lombok DevLab - Tips Website & Digital Marketing">
+    <meta property="og:description" content="Artikel bermanfaat seputar jasa pembuatan website di Lombok, tips SEO, dan strategi digital untuk bisnis Anda.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lombokdevlab.com/blog.html">
+    <meta property="og:site_name" content="Lombok DevLab">
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* tambahan style khusus blog */
+        .blog-header {
+            background: var(--primary); /* primary background */
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        .blog-header h1, .blog-header p {
+            color: white;
+        }
+        .blog-header .section-title {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .blog-header .section-sub {
+            color: rgba(255,255,255,0.9);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .blog-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-border);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 1.5rem;
+        }
+        .blog-date {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+        .blog-excerpt {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .read-more:hover { text-decoration: underline; }
+        .sidebar {
+            background: var(--gray-light);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.5rem; }
+        .sidebar a { text-decoration: none; color: #1e293b; }
+        .sidebar a:hover { color: var(--secondary); }
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Floating WA Button -->
+<a href="https://wa.me/6289518225535?text=Halo%20Lombok%20DevLab%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website" class="wa-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="logo-area">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+                <h1>Lombok DevLab</h1>
+                <span>Digital Solutions • Website Expert</span>
+            </div>
+        </div>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
+        <!-- <div class="nav-links" >...</div> -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#paket">Paket</a>
+            <a href="index.html#keunggulan">Keunggulan</a>
+            <a href="index.html#benefit-khusus">Benefit+</a>
+            <a href="blog.html">Tips Website</a>
+            <a href="https://wa.me/6289518225535?text=Halo%20Lombok%20DevLab%2C%20saya%20butuh%20konsultasi%20website" class="btn-wa-nav" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Blog dengan background primary -->
+<section class="blog-header">
+    <div class="container">
+        <h1 class="section-title" style="margin-bottom:0.5rem;">Blog Lombok DevLab</h1>
+        <p class="section-sub">Artikel & tips seputar pembuatan website, digital marketing, dan bisnis online untuk UMKM, cafe, travel di Lombok & Indonesia.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+        <!-- Main Content: Daftar Artikel -->
+        <div style="flex: 3;">
+            <div class="blog-grid">
+                <!-- Artikel 1 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&auto=format" alt="Tips memilih jasa pembuatan website di Lombok" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 1 Mei 2025</div>
+                        <h2 class="blog-title">7 Tips Memilih Jasa Pembuatan Website di Lombok yang Profesional</h2>
+                        <p class="blog-excerpt">Mencari jasa website di Lombok? Simak tips memilih developer yang tepat agar bisnis Anda makin maju. Mulai dari portofolio, harga, hingga layanan after sales...</p>
+                        <a href="post/tips-memilih-jasa-website-lombok.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Artikel 2 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&auto=format" alt="Website cafe modern dengan QR code menu" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 25 April 2025</div>
+                        <h2 class="blog-title">Mengapa Cafe di Lombok Wajib Punya Website + QR Code Menu?</h2>
+                        <p class="blog-excerpt">Digitalisasi cafe: dari menu QR, reservasi online, hingga integrasi Instagram. Pelanggan lebih tertarik dan higienis. Ini panduan lengkapnya...</p>
+                        <a href="post/cafe-wajib-punya-website-qr-code.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Artikel 3 -->
+                <article class="blog-card">
+                    <img src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Website travel untuk tour di Lombok" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 18 April 2025</div>
+                        <h2 class="blog-title">Strategi Jitu Travel & Tour di Lombok: Website dengan Itinerary & Booking Online</h2>
+                        <p class="blog-excerpt">Travel agent di Lombok perlu website yang bisa menampilkan paket wisata, itinerary per hari, dan sistem pemesanan langsung. Pelajari manfaatnya...</p>
+                        <a href="post/strategi-travel-website-itinerary-booking.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Artikel 4 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format" alt="UMKM lombok go digital" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 10 April 2025</div>
+                        <h2 class="blog-title">UMKM Lombok: Mulai Digitalisasi dengan Website dari Rp1,5 Juta Termasuk Domain & Hosting</h2>
+                        <p class="blog-excerpt">Tidak perlu modal besar untuk punya website profesional. Paket UMKM Go-Digital dari Lombok DevLab sudah termasuk semua kebutuhan dasar...</p>
+                        <a href="post/umkm-lombok-digital-website-murah.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Artikel 5 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&auto=format" alt="SEO lokal untuk bisnis di Lombok" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 2 April 2025</div>
+                        <h2 class="blog-title">Rahasia SEO Lokal: Membuat Bisnis Anda Muncul di Pencarian "Cafe Terdekat" dan "Jasa Website Lombok"</h2>
+                        <p class="blog-excerpt">Trik optimasi Google Maps, kata kunci lokal, dan konten yang relevan agar calon pelanggan di sekitar Anda mudah menemukan bisnis...</p>
+                        <a href="post/rahasia-seo-lokal-bisnis-lombok.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- Artikel 6 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format" alt="After sales website" class="blog-img" loading="lazy">
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar-alt"></i> 25 Maret 2025</div>
+                        <h2 class="blog-title">Pentingnya Layanan After Sales & Laporan Statistik untuk Website Bisnis Anda</h2>
+                        <p class="blog-excerpt">Website bukan hanya sekali jadi. Maintenance, bimbingan admin, dan laporan pengunjung adalah kunci kesuksesan jangka panjang...</p>
+                        <a href="post/pentingnya-after-sales-laporan-statistik.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div style="flex: 1;">
+            <div class="sidebar">
+                <h3><i class="fas fa-tags"></i> Kategori</h3>
+                <ul>
+                    <li><a href="#">Tips Website UMKM</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">SEO untuk Bisnis Lokal</a></li>
+                    <li><a href="#">Website Cafe & Restoran</a></li>
+                    <li><a href="#">Website Travel & Tour</a></li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <h3><i class="fas fa-star"></i> Artikel Populer</h3>
+                <ul>
+                    <li><a href="post/tips-memilih-jasa-website-lombok.html">7 Tips Memilih Jasa Website Lombok</a></li>
+                    <li><a href="post/cafe-wajib-punya-website-qr-code.html">Mengapa Cafe Wajib Punya Website + QR?</a></li>
+                    <li><a href="post/rahasia-seo-lokal-bisnis-lombok.html">Cara Optimasi Google Maps untuk Bisnis Anda</a></li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <h3><i class="fab fa-whatsapp"></i> Konsultasi Gratis</h3>
+                <p>Ada pertanyaan seputar pembuatan website? Langsung chat via WhatsApp.</p>
+                <a href="https://wa.me/6289518225535?text=Halo%20Lombok%20DevLab,%20saya%20mau%20konsultasi%20blog" class="btn-primary" style="display:block; text-align:center; margin-top:1rem; color: white;"><i class="fab fa-whatsapp"></i> Chat Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Bawah -->
+<div class="container seclast">
+    <div class="cta-section">
+        <i class="fas fa-chart-line" style="font-size: 2.5rem; margin-bottom: 1rem; display: inline-block;"></i>
+        <h2 style="font-size: 1.9rem;">💡 Lebih dari Sekadar Website</h2>
+        <p style="max-width: 700px; margin: 1rem auto;">Kami berikan laporan statistik bulanan + pengingat perpanjangan domain/hosting. Bisnis Anda tetap online tanpa drama.</p>
+        <a href="https://wa.me/6289518225535?text=Halo%20Lombok%20DevLab%2C%20saya%20tertarik%20dengan%20jaminan%20after%20sales%20dan%20laporan%20statistik" target="_blank" style="background: white; color: #0f3b3c; padding: 0.8rem 1.8rem; border-radius: 40px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fab fa-whatsapp"></i> Konsultasi Sekarang</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <div class="logo-icon"></div>
+                    <span style="font-weight: 700; font-size: 1.4rem; color: white;">Lombok DevLab</span>
+                </div>
+                <p style="max-width: 260px;">Membangun website modern & high-speed untuk bisnis lokal, kuliner & travel di seluruh Indonesia.</p>
+            </div>
+            <div>
+                <h4 style="color: white;">Hubungi Kami</h4>
+                <p><i class="fab fa-whatsapp"></i> +62 895-1822-5535</p>
+                <p><i class="far fa-envelope"></i> hello@lombokdevlab.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> pringgabaya, Lombok NTB</p>
+            </div>
+            <div>
+                <h4 style="color: white;">Jam Operasional</h4>
+                <p>Senin - Sabtu : 09:00 - 20:00</p>
+                <p>Konsultasi via WA 24/7</p>
+                <div style="margin-top: 0.5rem;">
+                    <a href="https://www.instagram.com/lombokdevlab/" style="color: #cbd5e1; margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/lombokdevlab" style="color: #cbd5e1;"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 2rem 0 1rem; border-color: #1e293b;">
+        <p style="text-align: center; font-size: 0.8rem;">&copy; 2025 Lombok DevLab - Jasa Pembuatan Website Profesional. All rights reserved. </p>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    }
+</script>
+</body>
+</html>

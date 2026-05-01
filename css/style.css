@@ -34,7 +34,9 @@ body {
 }
 
 .sec { height: 70vh; }
-.sec2 { min-height: 100vh; padding: 6rem 0rem; }
+.sec2 { min-height: 100vh; padding: 6rem 0rem; 
+}
+
 .sec3 { min-height: 100vh; padding: 0rem 3rem 0rem; }
 .seclast { padding: 8rem 3rem 0rem; }
 
@@ -172,7 +174,8 @@ body {
 /* Hero */
 .hero {
   padding: 4rem 0 3rem;
-  background: linear-gradient(135deg, #fef9f0, #fff);
+  /* background: linear-gradient(135deg, #fef9f0, #fff); */
+  background: linear-gradient(135deg, #ffffff, #dcedff);
 }
 .hero-grid {
   display: flex;
@@ -306,10 +309,11 @@ body {
 }
 .pillar h4 i { color: var(--secondary); margin-right: 0.5rem; }
 .cta-section {
-  background: linear-gradient(110deg, #0f3b3c, #1a5a5c);
+  /* background: linear-gradient(110deg, #0f3b3c, #1a5a5c); */
+  background: linear-gradient(110deg, #222C74, #3c9aff);
   border-radius: 2rem;
   padding: 3rem;
-  margin: 3rem 0;
+  margin: 2rem 0;
   text-align: center;
   color: #fff;
 }
