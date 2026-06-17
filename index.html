@@ -111,6 +111,296 @@
         padding: 10px 0; 
     }
 }
+/* element tambahan start */
+/* Portfolio Section Styles */
+.portfolio-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-section .bg-shape-glow {
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(106, 71, 237, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.portfolio-slider-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-slider-wrapper .swiper {
+    padding: 20px 10px 40px;
+}
+
+.portfolio-slider-wrapper .swiper-slide {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.5;
+    transform: scale(0.85) perspective(1000px) rotateY(5deg);
+    filter: blur(2px) brightness(0.7);
+}
+
+.portfolio-slider-wrapper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1) perspective(1000px) rotateY(0deg);
+    filter: blur(0) brightness(1);
+}
+
+.portfolio-slider-wrapper .swiper-slide-next,
+.portfolio-slider-wrapper .swiper-slide-prev {
+    opacity: 0.8;
+    transform: scale(0.9) perspective(1000px) rotateY(-3deg);
+    filter: blur(1px) brightness(0.85);
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid rgba(106, 71, 237, 0.1);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(106, 71, 237, 0.15);
+}
+
+.portfolio-card .portfolio-image-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #f5f0ff 0%, #e8e0f5 100%);
+}
+
+.portfolio-card .portfolio-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.portfolio-card:hover .portfolio-image-wrap img {
+    transform: scale(1.05);
+}
+
+.portfolio-card .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(106, 71, 237, 0.85) 0%, rgba(46, 18, 128, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-card .portfolio-overlay .icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.portfolio-card .portfolio-overlay .icon-circle i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.portfolio-card:hover .portfolio-overlay .icon-circle {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-card .portfolio-overlay h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.portfolio-card .portfolio-overlay p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+}
+
+.portfolio-card .portfolio-info {
+    padding: 20px 24px 24px;
+}
+
+.portfolio-card .portfolio-info .badge-tech {
+    display: inline-block;
+    background: rgba(106, 71, 237, 0.1);
+    color: #6A47ED;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.portfolio-card .portfolio-info h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 10px 0 5px;
+    color: #1a1a1a;
+}
+
+.portfolio-card .portfolio-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.portfolio-slider-wrapper .swiper-button-next,
+.portfolio-slider-wrapper .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px rgba(106, 71, 237, 0.15);
+    border: 2px solid rgba(106, 71, 237, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-slider-wrapper .swiper-button-next:hover,
+.portfolio-slider-wrapper .swiper-button-prev:hover {
+    background: #6A47ED;
+    border-color: #6A47ED;
+    box-shadow: 0 8px 30px rgba(106, 71, 237, 0.3);
+}
+
+.portfolio-slider-wrapper .swiper-button-next:hover::after,
+.portfolio-slider-wrapper .swiper-button-prev:hover::after {
+    color: #fff;
+}
+
+.portfolio-slider-wrapper .swiper-button-next::after,
+.portfolio-slider-wrapper .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: 700;
+    color: #6A47ED;
+    transition: color 0.3s ease;
+}
+
+.portfolio-slider-wrapper .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+}
+
+.portfolio-slider-wrapper .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    opacity: 1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.portfolio-slider-wrapper .swiper-pagination .swiper-pagination-bullet-active {
+    background: #6A47ED;
+    border-color: rgba(106, 71, 237, 0.3);
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(106, 71, 237, 0.3);
+}
+
+/* Particle Glow Effect */
+.particle-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle-glow span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(106, 71, 237, 0.2);
+    border-radius: 50%;
+    animation: floatParticle 8s infinite;
+}
+
+.particle-glow span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.particle-glow span:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; width: 6px; height: 6px; }
+.particle-glow span:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; }
+.particle-glow span:nth-child(4) { top: 80%; left: 70%; animation-delay: 1s; width: 8px; height: 8px; }
+.particle-glow span:nth-child(5) { top: 20%; left: 50%; animation-delay: 3s; }
+.particle-glow span:nth-child(6) { top: 70%; left: 40%; animation-delay: 5s; width: 5px; height: 5px; }
+
+@keyframes floatParticle {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+    50% { transform: translateY(-30px) scale(1.5); opacity: 0.6; }
+}
+
+/* Glow border effect on active slide */
+.portfolio-slider-wrapper .swiper-slide-active .portfolio-card {
+    border-color: rgba(106, 71, 237, 0.3);
+    box-shadow: 0 20px 60px rgba(106, 71, 237, 0.12), 0 0 40px rgba(106, 71, 237, 0.05);
+}
+
+@media (max-width: 991px) {
+    .portfolio-slider-wrapper .swiper-slide {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+    .portfolio-slider-wrapper .swiper-slide-next,
+    .portfolio-slider-wrapper .swiper-slide-prev {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+    .portfolio-slider-wrapper .swiper-button-next,
+    .portfolio-slider-wrapper .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-card .portfolio-info {
+        padding: 15px 18px 18px;
+    }
+    .portfolio-card .portfolio-info h4 {
+        font-size: 15px;
+    }
+    .portfolio-card .portfolio-overlay h4 {
+        font-size: 15px;
+    }
+}
+/* element tambahan end */
+
+
     </style>
 </head>
 <body>
@@ -988,6 +1278,170 @@
     </div>
 </section>
 
+<!-- Portfolio Section - Website Projects -->
+<section class="portfolio-section fix section-padding" style="background: #f8f9fe; position: relative; overflow: hidden;">
+    <div class="bg-shape-glow"></div>
+    <div class="particle-glow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <div class="section-title-area mb-4">
+            <div class="section-title" style="width: 100%;">
+                <div class="sub-title wow fadeInUp"><span>🚀 OUR PORTFOLIO / PROYEK KAMI</span></div>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Website Projects We've <br><strong style="color: var(--theme);">Built for Our Clients</strong></h2>
+            </div>
+            <p class="wow fadeInUp" data-wow-delay=".5s" style="max-width: 580px;">Berikut adalah beberapa hasil karya website yang telah kami kembangkan untuk berbagai klien dari berbagai industri.</p>
+        </div>
+        
+        <div class="portfolio-slider-wrapper position-relative">
+            <div class="swiper portfolio-slider">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portofolio/smkn1pringgabaya.png" alt="Company Profile Website - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>SMKN 1 PRINGGABAYA</h4>
+                                    <p>Website Sekolah</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">Website Sekolah</span>
+                                <h4>SMKN 1 PRINGGABAYA</h4>
+                                <p>Website sekolah modern dengan desain profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portfolio/ecommerce-1.jpg" alt="E-Commerce Website - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>Fashion Store ID</h4>
+                                    <p>E-Commerce</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">E-Commerce</span>
+                                <h4>Fashion Store ID</h4>
+                                <p>Toko online dengan payment gateway & sistem inventory</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portfolio/landing-page-1.jpg" alt="Landing Page - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>Digital Marketing Academy</h4>
+                                    <p>Landing Page</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">Landing Page</span>
+                                <h4>Digital Marketing Academy</h4>
+                                <p>Landing page high-conversion untuk kursus online</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portfolio/travel-1.jpg" alt="Travel Website - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>Sasak Lombok Tour</h4>
+                                    <p>Travel Website</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">Travel & Tourism</span>
+                                <h4>Sasak Lombok Tour</h4>
+                                <p>Website wisata dengan booking system & gallery</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portfolio/restaurant-1.jpg" alt="Restaurant Website - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>Warung Makan Nusantara</h4>
+                                    <p>Restaurant Website</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">Restaurant</span>
+                                <h4>Warung Makan Nusantara</h4>
+                                <p>Website restoran dengan menu digital & reservation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image-wrap">
+                                <img src="assets/img/portfolio/education-1.jpg" alt="Education Website - Lombok Devlab Project">
+                                <div class="portfolio-overlay">
+                                    <div class="icon-circle">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </div>
+                                    <h4>Pesantren Digital</h4>
+                                    <p>Education Website</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="badge-tech">Education</span>
+                                <h4>Pesantren Digital</h4>
+                                <p>Website pendidikan dengan sistem manajemen santri</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<!-- end -->
+
 <!-- cta sec -->
 <section class="cta-section section-padding pb-0">
     <div class="rokect-shape float-bob-y"><img src="assets/img/rokect.png" alt="Lombok Devlab Web Agency Rocket Element"></div>
@@ -1117,5 +1571,93 @@
 <script src="assets/js/circle-progress.js"></script>
 <script src="assets/js/contact.form.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+// Portfolio Slider Initialization
+$(document).ready(function() {
+    var portfolioSlider = new Swiper('.portfolio-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        speed: 800,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 150,
+            modifier: 1,
+            slideShadows: false,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+                centeredSlides: false,
+                coverflowEffect: {
+                    depth: 80,
+                },
+            },
+            992: {
+                slidesPerView: 2.2,
+                spaceBetween: 30,
+                centeredSlides: true,
+                coverflowEffect: {
+                    depth: 120,
+                },
+            },
+            1200: {
+                slidesPerView: 2.8,
+                spaceBetween: 35,
+                centeredSlides: true,
+                coverflowEffect: {
+                    depth: 150,
+                },
+            },
+        },
+        navigation: {
+            nextEl: '.portfolio-slider-wrapper .swiper-button-next',
+            prevEl: '.portfolio-slider-wrapper .swiper-button-prev',
+        },
+        pagination: {
+            el: '.portfolio-slider-wrapper .swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        on: {
+            init: function() {
+                // Add active class for styling
+                this.slides.forEach(function(slide, index) {
+                    if (index === this.activeIndex) {
+                        slide.classList.add('swiper-slide-active');
+                    }
+                }.bind(this));
+            },
+            slideChange: function() {
+                // Update active class
+                this.slides.forEach(function(slide) {
+                    slide.classList.remove('swiper-slide-active');
+                });
+                this.slides[this.activeIndex].classList.add('swiper-slide-active');
+            }
+        }
+    });
+    
+    // Pause autoplay on hover
+    $('.portfolio-slider-wrapper .swiper').on('mouseenter', function() {
+        portfolioSlider.autoplay.stop();
+    }).on('mouseleave', function() {
+        portfolioSlider.autoplay.start();
+    });
+});
+</script>
 </body>
 </html>
